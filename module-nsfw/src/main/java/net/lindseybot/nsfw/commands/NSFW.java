@@ -34,7 +34,7 @@ public class NSFW extends InteractionHandler {
         this.service = service;
     }
 
-    @SlashCommand(value = "nsfw.rule34", nsfw = true)
+    @SlashCommand(value = "nsfw.rule34", nsfw = false)
     public void onRule34(SlashCommandInteractionEvent event) {
         ImageBoard<Rule34Image> api = DefaultImageBoards.RULE34;
         String filter = this.getOption("tags", event, String.class);
@@ -45,7 +45,7 @@ public class NSFW extends InteractionHandler {
         }
     }
 
-    @SlashCommand(value = "nsfw.danbooru", nsfw = true)
+    @SlashCommand(value = "nsfw.danbooru", nsfw = false)
     public void onDanbooru(SlashCommandInteractionEvent event) {
         ImageBoard<DanbooruImage> api = DefaultImageBoards.DANBOORU;
         String filter = this.getOption("tags", event, String.class);
@@ -67,7 +67,7 @@ public class NSFW extends InteractionHandler {
         }
     }
 
-    @SlashCommand(value = "nsfw.gelbooru", nsfw = true)
+    @SlashCommand(value = "nsfw.gelbooru", nsfw = false)
     public void onGelbooru(SlashCommandInteractionEvent event) {
         ImageBoard<GelbooruImage> api = DefaultImageBoards.GELBOORU;
         String filter = this.getOption("tags", event, String.class);
